@@ -166,123 +166,124 @@
 }
 
 <style>
-    .validation-container {
-      padding: 2rem 0;
-    }
-    
+  .validation-container {
+    padding: 2rem 0;
+  }
+  
+  .validation-logos-grid {
+    display: grid;
+    grid-template-areas: 
+      "method1 method1 method1"
+      "method2 method3 method4"
+      "method5 method5 method5"
+      "method6 method6 method6";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .validation-logo {
+    background: transparent;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .validation-logo:nth-child(1) { grid-area: method1; }
+  .validation-logo:nth-child(2) { grid-area: method2; }
+  .validation-logo:nth-child(3) { grid-area: method3; }
+  .validation-logo:nth-child(4) { grid-area: method4; }
+  .validation-logo:nth-child(5) { grid-area: method5; }
+  .validation-logo:nth-child(6) { grid-area: method6; }
+  
+  .validation-logo:hover {
+    transform: translateY(-5px) scale(1.05);
+    filter: brightness(1.1);
+  }
+  
+  .validation-logo.active {
+    transform: translateY(-5px) scale(1.1);
+    filter: brightness(1.2) drop-shadow(0 4px 12px rgba(50, 115, 220, 0.4));
+  }
+  
+  .validation-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .result-display {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 0rem;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .result-display img {
+    max-width: 60vh;
+    max-height: 30vh;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    object-fit: contain;
+    margin-top: 0;
+  }
+  
+  .result-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #363636;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .result-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    text-align: justify;
+    max-width: 600px;
+    margin: 1rem auto 0 auto;
+  }
+  
+  @media screen and (max-width: 768px) {
     .validation-logos-grid {
-      display: grid;
       grid-template-areas: 
-        "method1 method1 method1"
-        "method2 method3 method4"
-        "method5 method5 method5"
-        "method6 method6 method6";
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 0rem;
-      margin-bottom: 1rem;
+        "method1"
+        "method2"
+        "method3"
+        "method4"
+        "method5"
+        "method6";
+      grid-template-columns: 1fr;
+      gap: 0.25rem;
     }
     
     .validation-logo {
-      background: transparent;
-      border: none;
-      padding: 0.5rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .validation-logo:nth-child(1) { grid-area: method1; }
-    .validation-logo:nth-child(2) { grid-area: method2; }
-    .validation-logo:nth-child(3) { grid-area: method3; }
-    .validation-logo:nth-child(4) { grid-area: method4; }
-    .validation-logo:nth-child(5) { grid-area: method5; }
-    .validation-logo:nth-child(6) { grid-area: method6; }
-    
-    .validation-logo:hover {
-      transform: translateY(-5px) scale(1.05);
-      filter: brightness(1.1);
-    }
-    
-    .validation-logo.active {
-      transform: translateY(-5px) scale(1.1);
-      filter: brightness(1.2) drop-shadow(0 4px 12px rgba(50, 115, 220, 0.4));
-    }
-    
-    .validation-logo img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
+      padding: 0.25rem;
     }
     
     .result-display {
-      background: #ffffff;
-      border: 2px solid #e9ecef;
-      border-radius: 12px;
-      padding: 2rem;
-      min-height: 500px;
-      text-align: center;
-    }
-    
-    .result-display img {
-      max-width: 100%;
-      max-height: 350px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-bottom: 1.5rem;
-    }
-    
-    .result-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #363636;
-      margin-bottom: 1.5rem;
+      margin-top: 2rem;
+      padding: 0.5rem;
+      min-height: 200px;
     }
     
     .result-description {
-      font-size: 1rem;
-      color: #666;
-      line-height: 1.6;
-      text-align: justify;
-      max-width: 600px;
-      margin: 0 auto;
+      text-align: left;
     }
-    
-    .section-title {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-    
-    @media screen and (max-width: 768px) {
-      .validation-logos-grid {
-        grid-template-areas: 
-          "method1"
-          "method2"
-          "method3"
-          "method4"
-          "method5"
-          "method6";
-        grid-template-columns: 1fr;
-        gap: 0.5rem;
-      }
-      
-      .validation-logo {
-        padding: 0.15rem;
-      }
-      
-      .result-display {
-        margin-top: 2rem;
-        padding: 1.5rem;
-        min-height: 300px;
-      }
-      
-      .result-description {
-        text-align: left;
-      }
-    }
-  </style>
+  }
+</style>
 
   
 
@@ -649,35 +650,33 @@
 <!-- VALIDATION SECTION -->
 <section class="section validation-container">
   <div class="container">
-    <h2 class="title is-3 section-title">Validation Methods</h2>
-    
     <div class="columns">
       <!-- Left Column: Validation Logo Grid -->
       <div class="column is-one-third">
         <div class="validation-logos-grid">
           
           <div class="validation-logo active" data-method="1">
-            <img src="static/images/pdf_logo.png" alt="Validation Method 1">
+            <img src="static/images/valid_logo/pdf_logo.png" alt="Validation Method 1">
           </div>
           
           <div class="validation-logo" data-method="2">
-            <img src="static/images/bad_logo.png" alt="Validation Method 2">
+            <img src="static/images/valid_logo/bad_logo.png" alt="Validation Method 2">
           </div>
           
           <div class="validation-logo" data-method="3">
-            <img src="static/images/ring_dis_logo.png" alt="Validation Method 3">
+            <img src="static/images/valid_logo/ring_dis_logo.png" alt="Validation Method 3">
           </div>
           
           <div class="validation-logo" data-method="4">
-            <img src="static/images/mehc_logo.png" alt="Validation Method 4">
+            <img src="static/images/valid_logo/mech.png" alt="Validation Method 4">
           </div>
           
           <div class="validation-logo" data-method="5">
-            <img src="static/images/deformation_logo.png" alt="Validation Method 5">
+            <img src="static/images/valid_logo/deformation_logo.png" alt="Validation Method 5">
           </div>
           
           <div class="validation-logo" data-method="6">
-            <img src="static/images/info_entropy_logo.png" alt="Validation Method 6">
+            <img src="static/images/valid_logo/info_entropy_logo.png" alt="Validation Method 6">
           </div>
           
         </div>
@@ -688,9 +687,11 @@
         <div class="result-display">
           <div class="result-content">
             <h3 class="result-title" id="result-title">Pair Distribution Function Validation</h3>
-            <img id="result-image" src="static/images/valid_result_1.png" alt="Validation Result">
+            <img id="result-image" src="static/images/valid_result/valid_pdf_sio2.png" alt="Validation Result">
             <p class="result-description" id="result-description">
-              Our denoising diffusion model successfully reproduces the pair distribution function g(r) characteristics of amorphous materials. The generated structures show excellent agreement with experimental and molecular dynamics reference data, capturing both short-range and medium-range structural ordering essential for realistic material properties.
+              Our denoising diffusion model successfully reproduces the pair distribution function g(r) characteristics of amorphous materials. 
+              The generated structures show excellent agreement with experimental and molecular dynamics reference data, capturing both short-range 
+              and medium-range structural ordering essential for realistic material properties.
             </p>
           </div>
         </div>
@@ -702,108 +703,264 @@
 <script>
   // Validation data for each method
   const validationData = {
-    '1': {
-      title: 'Pair Distribution Function Validation',
-      image: 'static/images/valid_result_1.png',
-      description: 'Our denoising diffusion model successfully reproduces the pair distribution function g(r) characteristics of amorphous materials. The generated structures show excellent agreement with experimental and molecular dynamics reference data, capturing both short-range and medium-range structural ordering essential for realistic material properties.'
-    },
-    '2': {
-      title: 'Bond Angle Distribution Analysis',
-      image: 'static/images/valid_result_2.png',
-      description: 'The bond angle distribution analysis demonstrates that our generated amorphous structures maintain the correct angular preferences and tetrahedral coordination typical of silica-based materials. This validation confirms the model\'s ability to preserve local geometric constraints while generating diverse structural configurations.'
-    },
-    '3': {
-      title: 'Ring Size Distribution Validation',
-      image: 'static/images/valid_result_3.png',
-      description: 'Ring statistics analysis reveals that our model accurately reproduces the ring size distribution patterns characteristic of amorphous networks. The generated structures exhibit the appropriate balance of small and large rings, essential for capturing the connectivity and topology of disordered materials.'
-    },
-    '4': {
-      title: 'Mechanical Properties Validation',
-      image: 'static/images/valid_result_4.png',
-      description: 'Mechanical property calculations (Young\'s modulus E, shear modulus G, bulk modulus K, and Poisson\'s ratio ν) on generated structures show excellent correlation with experimental values. This validates that our model produces materials with realistic mechanical behavior suitable for engineering applications.'
-    },
-    '5': {
-      title: 'Plastic Deformation Behavior',
-      image: 'static/images/valid_result_5.png',
-      description: 'Stress-strain analysis of generated amorphous structures reveals realistic plastic deformation mechanisms and failure modes. The model successfully captures the complex yielding behavior and strain localization patterns observed in experimental studies of amorphous materials.'
-    },
-    '6': {
-      title: 'Information Entropy Analysis',
-      image: 'static/images/valid_result_6.png',
-      description: 'Information entropy measurements confirm that generated structures exhibit appropriate levels of structural disorder and randomness. The entropy distribution p(x) matches expected values for amorphous materials, validating that our model avoids artificial ordering or crystallization artifacts.'
-    }
-  };
+  '1': {
+    images: [
+      {
+        src: 'static/images/valid_result/valid_pdf_sio2.png',
+        caption: 'Case of a-SiO₂',
+        description: 'Pair distribution function comparison for amorphous silica shows excellent agreement between our generated structures and reference molecular dynamics simulations, capturing the characteristic Si-O, Si-Si and O-O correlations.'
+      },
+      {
+        src: 'static/images/valid_result/valid_pdf_cuzr.png',
+        caption: 'Case of metallic glass Cu<sub>50</sub>Zr<sub>50</sub>',
+        description: 'Validation of pair distribution functions for CuZr metallic glass demonstrates the model\'s versatility across different material systems, accurately reproducing the short-range atomic ordering characteristic of metallic glasses.'
+      },
+      {
+        src: 'static/images/valid_result/valid_pdf_exp.png',
+        caption: 'Case of reproducing experimental data',
+        description: 'Direct trained from <a href="https://www.nature.com/articles/s41586-021-03354-0" target="_blank" style="color: #3273dc; text-decoration: underline;">experimental atomic model</a> and comparison of pair distribution functions validates that our generated structures capture real-world structural features, bridging the gap between computational models and experimental observations.'
+      }
+    ]
+  },
+  '2': {
+    images: [
+      {
+        src: 'static/images/valid_result/valid_BAD.png',
+        caption: 'Bond angle distribution',
+        description: 'Excellent agreement of bond angle distribution between generated and simulated amorphous silica on both inter-tetrahedral O-Si-O and inter-polytope Si-O-Si bond angles.'
+      }
+    ]
+  },
+  '3': {
+    images: [
+      {
+        src: 'static/images/valid_result/valid_ring.png',
+        caption: 'Ring size statistics',
+        description: 'Our model accurately reproduces the ring size distribution patterns characteristic of amorphous networks. The generated structures exhibit the appropriate balance of small and large rings, essential for capturing the connectivity and topology of disordered materials.'
+      }
+    ]
+  },
+  '4': {
+    images: [
+      {
+        src: 'static/images/valid_result/valid_mech.png',
+        caption: 'Mechanical properties comparison',
+        description: 'Mechanical property calculations (Young\'s modulus E, shear modulus G, bulk modulus K, and Poisson\'s ratio ν) on generated structures show excellent agreement with simulated values.  The moduli are highly sensitive to outliers, yet the model is able to generate structures giving reliable values.'
+      }
+    ]
+  },
+  '5': {
+    images: [
+      {
+        src: 'static/images/valid_result/valid_stress_strain_size.png',
+        caption: 'Size effect on stress-strain behavior',
+        description: 'Stress-strain analysis demonstrates how system size affects the mechanical response of generated amorphous structures. The results show realistic plastic deformation mechanisms and size-dependent failure modes consistent with <a href="https://www.sciencedirect.com/science/article/pii/S0022309324001169" target="_blank" style="color: #3273dc; text-decoration: underline;">previous work</a> .'
+      }
+    ]
+  },
+  '6': {
+    images: [
+      {
+        src: 'static/images/valid_result/valid_entropy_overall.png',
+        caption: 'Overall entropy distribution',
+        description: 'Information entropy confirms that generated structures exhibit appropriate levels of local structural similarites compared to simulated counterparts. The entropy distribution validates realistic amorphous characteristics compared to simulated structures (See detailed score in the Next figure).'
+      },
+      {
+        src: 'static/images/valid_result/valid_entropy_detail.png',
+        caption: 'Detailed entropy matrices',
+        description: 'Detailed overlap scores between (generated | generated), (simulated | simulated), (generated | simulated) a-SiO<sub>2</sub> structures. Six indenpendent simulations and generations were performed for this analysis. '
+      }
+    ]
+  }
+};
 
-  // Wait for DOM to be fully loaded
-  document.addEventListener('DOMContentLoaded', function() {
-    // Get DOM elements
-    const validationLogos = document.querySelectorAll('.validation-logo');
-    const resultTitle = document.getElementById('result-title');
-    const resultImage = document.getElementById('result-image');
-    const resultDescription = document.getElementById('result-description');
-    const resultDisplay = document.querySelector('.result-display');
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Get DOM elements
+  const validationLogos = document.querySelectorAll('.validation-logo');
+  const resultTitle = document.getElementById('result-title');
+  const resultImage = document.getElementById('result-image');
+  const resultDescription = document.getElementById('result-description');
+  const resultDisplay = document.querySelector('.result-display');
 
-    // Function to update the display
-    function updateDisplay(methodNumber) {
-      const data = validationData[methodNumber];
+// Function to update the display
+function updateDisplay(methodNumber) {
+  const data = validationData[methodNumber];
+  
+  // Add loading animation
+  resultDisplay.style.transition = 'opacity 0.3s ease';
+  resultDisplay.style.opacity = '0.5';
+  
+  setTimeout(() => {
+    // Update title
+    resultTitle.textContent = data.title;
+    
+    // Handle multiple images with carousel - FIXED CLEANUP
+    const resultContent = document.querySelector('.result-content');
+    const existingImages = resultContent.querySelectorAll('#result-image, .results-carousel, .carousel-controls, .carousel-wrapper');
+    existingImages.forEach(img => img.remove());
+    
+    // ALWAYS use carousel style - removed if/else condition
+    const carouselDiv = document.createElement('div');
+    carouselDiv.className = 'carousel results-carousel';
+    carouselDiv.id = 'validation-carousel';
+    carouselDiv.style.cssText = 'margin: 0 0 0.5rem 0; width: 100%;'; // Added width: 100%
+    
+    // Create carousel slides
+    data.images.forEach((imageData, index) => {
+      const slideDiv = document.createElement('div');
+      slideDiv.className = 'carousel-slide';
+      slideDiv.style.cssText = `display: ${index === 0 ? 'block' : 'none'}; margin: 0; padding: 0; background: transparent; width: 100%;`; // Added width: 100%
       
-      // Add loading animation
-      resultDisplay.style.transition = 'opacity 0.3s ease';
-      resultDisplay.style.opacity = '0.5';
-      
-      setTimeout(() => {
-        // Update content
-        resultTitle.textContent = data.title;
-        resultImage.src = data.image;
-        resultImage.alt = data.title;
-        resultDescription.textContent = data.description;
-        
-        // Show updated content
-        resultDisplay.style.opacity = '1';
-        
-        // Add debug logging
-        console.log('Updated to method:', methodNumber);
-        console.log('Title:', data.title);
-        console.log('Image:', data.image);
-      }, 150);
-    }
+      const contentDiv = document.createElement('div');
+      contentDiv.className = 'content has-text-centered';
+      contentDiv.style.cssText = 'display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;'; // Added flexbox centering
 
-    // Add click event listeners with improved debugging
-    validationLogos.forEach((logo, index) => {
-      logo.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        // Remove active class from all logos
-        validationLogos.forEach(l => l.classList.remove('active'));
-        
-        // Add active class to clicked logo
-        this.classList.add('active');
-        
-        // Get the method number
-        const methodNumber = this.getAttribute('data-method');
-        console.log('Clicked logo:', methodNumber);
-        
-        // Update the display
-        updateDisplay(methodNumber);
-      });
-      
-      // Add hover effect for better feedback
-      logo.addEventListener('mouseenter', function() {
-        if (!this.classList.contains('active')) {
-          this.style.transform = 'translateY(-3px)';
-        }
-      });
-      
-      logo.addEventListener('mouseleave', function() {
-        if (!this.classList.contains('active')) {
-          this.style.transform = 'translateY(0)';
-        }
-      });
+      const caption = document.createElement('h4');
+      caption.innerHTML = imageData.caption;
+      caption.style.cssText = 'font-size: 1.3rem; font-weight: 600; color: #363636; margin: 0 1rem 1rem 1rem; text-align: center;';
+
+      const img = document.createElement('img');
+      img.src = imageData.src;
+      img.alt = imageData.caption;
+      img.style.cssText = 'max-width: 60vh; max-height: 30vh; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: block; margin: 0 auto; position: relative;'; // Added position: relative
+
+      contentDiv.appendChild(caption);
+      contentDiv.appendChild(img);
+      slideDiv.appendChild(contentDiv);
+      carouselDiv.appendChild(slideDiv);
     });
+    
+    // Create navigation controls - ONLY show if more than 1 image
+    const controlsDiv = document.createElement('div');
+    controlsDiv.className = 'carousel-controls';
+    controlsDiv.style.cssText = 'position: relative; display: flex; align-items: center; justify-content: center; width: 100%; margin-top: 0.5rem;'; // Updated for better centering
+    
+    let prevBtn, nextBtn, indicator;
+    
+    if (data.images.length > 1) {
+      prevBtn = document.createElement('button');
+      prevBtn.innerHTML = '← Previous';
+      prevBtn.className = 'button is-light is-small';
+      prevBtn.style.cssText = 'margin-right: 0.5rem;';
+      
+      nextBtn = document.createElement('button');
+      nextBtn.innerHTML = 'Next →';
+      nextBtn.className = 'button is-light is-small';
+      nextBtn.style.cssText = 'margin-left: 1rem;';
+      
+      indicator = document.createElement('span');
+      indicator.style.cssText = 'font-size: 0.9rem; color: #666; margin: 0 1rem;';
+      indicator.textContent = `1 / ${data.images.length}`;
+    }
+    
+    // Add carousel functionality
+    let currentIndex = 0;
+    const slides = carouselDiv.querySelectorAll('.carousel-slide');
+    
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+      });
+      
+      // Update description for current image
+      resultDescription.innerHTML = data.images[index].description;
+      
+      if (data.images.length > 1) {
+        indicator.textContent = `${index + 1} / ${data.images.length}`;
+        
+        // Update button states
+        prevBtn.disabled = index === 0;
+        nextBtn.disabled = index === data.images.length - 1;
+        
+        if (prevBtn.disabled) {
+          prevBtn.classList.add('is-static');
+        } else {
+          prevBtn.classList.remove('is-static');
+        }
+        
+        if (nextBtn.disabled) {
+          nextBtn.classList.add('is-static');
+        } else {
+          nextBtn.classList.remove('is-static');
+        }
+      }
+    }
+    
+    if (data.images.length > 1) {
+      prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          showSlide(currentIndex);
+        }
+      });
+      
+      nextBtn.addEventListener('click', () => {
+        if (currentIndex < data.images.length - 1) {
+          currentIndex++;
+          showSlide(currentIndex);
+        }
+      });
+      
+      controlsDiv.appendChild(prevBtn);
+      controlsDiv.appendChild(indicator);
+      controlsDiv.appendChild(nextBtn);
+    }
+    
+    // Initialize with first image description
+    showSlide(0);
+    
+    // Insert carousel and controls
+    const carouselWrapper = document.createElement('div');
+    carouselWrapper.className = 'carousel-wrapper';
+    carouselWrapper.style.cssText = 'position: relative; display: flex; flex-direction: column; align-items: center; width: 100%; margin: 0 0 1rem 0;'; // Updated for better centering
+    carouselWrapper.appendChild(carouselDiv);
+    carouselWrapper.appendChild(controlsDiv);
+    
+    resultContent.insertBefore(carouselWrapper, resultContent.querySelector('.result-description'));
+    
+    // Show updated content
+    resultDisplay.style.opacity = '1';
+  }, 150);
+}
 
-    // Ensure first logo is properly initialized
-    updateDisplay('1');
+// Add click event listeners
+validationLogos.forEach((logo, index) => {
+  logo.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    // Remove active class from all logos
+    validationLogos.forEach(l => l.classList.remove('active'));
+    
+    // Add active class to clicked logo
+    this.classList.add('active');
+    
+    // Get the method number
+    const methodNumber = this.getAttribute('data-method');
+    console.log('Clicked logo:', methodNumber);
+    
+    // Update the display
+    updateDisplay(methodNumber);
   });
+  
+  // Add hover effect for better feedback
+  logo.addEventListener('mouseenter', function() {
+    if (!this.classList.contains('active')) {
+      this.style.transform = 'translateY(-3px)';
+    }
+  });
+  
+  logo.addEventListener('mouseleave', function() {
+    if (!this.classList.contains('active')) {
+      this.style.transform = 'translateY(0)';
+    }
+  });
+});
+
+// Ensure first logo is properly initialized
+updateDisplay('1');
+});
+
 </script>
 
 <!-- Application -->
@@ -1364,29 +1521,28 @@
 </section>
 
 
-<!-- @PAN TODO: bibtex -->
+<!-- BibTex-->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title is-3 has-text-centered">BibTeX</h2>
-    <pre><code>@inproceedings{lu2024mathvista,
-  author    = {Lu, Pan and Bansal, Hritik and Xia, Tony and Liu, Jiacheng and Li, Chunyuan and Hajishirzi, Hannaneh and Cheng, Hao and Chang, Kai-Wei and Galley, Michel and Gao, Jianfeng},
-  title     = {MathVista: Evaluating Mathematical Reasoning of Foundation Models in Visual Contexts},
-  booktitle={International Conference on Learning Representations (ICLR)},
-  year      = {2024}
+    <pre><code>@article{yang2025generative,
+  title   ={A Generative Diffusion Model for Amorphous Materials},
+  author  ={Yang, Kai and Schwalbe-Koda, Daniel},
+  journal ={arXiv preprint arXiv:2507.05024},
+  year    ={2025}
 }</code></pre>
   </div>
 </section>
 
+
+<!-- LOGO section -->
 <section>
   <div class="section" id="org-banners" style="display:flex">
-    <a href="https://www.ucla.edu/" target="_blank" rel="external">
-        <img class="center-block org-banner" src="static/images/ucla.png">
+    <a href="https://www.mse.ucla.edu/" target="_blank" rel="external">
+      <img class="center-block org-banner" src="static/images/logos/ucla_mse_logo.png">
     </a>
-    <a href="https://www.washington.edu/" target="blank" class="ext-link">
-        <img class="center-block org-banner" src="static/images/uw.png">
-    </a>
-    <a href="https://www.microsoft.com/en-us/research/" target="_blank" rel="external">
-        <img class="center-block org-banner" src="static/images/microsoft.png">
+    <a href="https://www.tri.global/our-work/energy-materials" target="_blank" rel="external">
+      <img class="center-block org-banner" src="static/images/logos/Toyota_Research_Institute_Logo_Square.png">
     </a>
   </div>
 </section>
@@ -1400,7 +1556,7 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a>, licensed under a <a rel="license"
+            This website is adapted from <a href="https://nerfies.github.io/">Nerfies</a>, licensed under a <a rel="license"
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>

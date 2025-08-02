@@ -8,6 +8,11 @@ body {
     color: #000;
 }
 
+.large-logo {
+  width: 600px; /* or whatever size you want */
+  height: auto;
+}
+
 .link-block a {
     margin-top: 5px;
     margin-bottom: 5px;
