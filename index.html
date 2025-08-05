@@ -625,10 +625,10 @@
           <!-- Download Links -->
           <div class="download-section has-text-centered">
             <p class="download-text">
-              Download our denoiser models <a href="#" class="download-link">here</a>.
+              Download our denoiser models <a href="#" class="download-link">here</a> (UNDER CONSTRUCTION).
             </p>
             <p class="download-text">
-              Download our generation script <a href="#" class="download-link">here</a>.
+              Download our generation script <a href="#" class="download-link">here</a> (UNDER CONSTRUCTION).
             </p>
           </div>
 
@@ -637,6 +637,145 @@
     </div>
   </div>
 </section>
+
+<!-- AVAILABLE MODELS SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3 has-text-centered" style="margin-bottom: 3rem;">Available Models</h2>
+        
+        <div class="table-container">
+          <table class="table is-fullwidth is-striped is-hoverable">
+            <thead>
+              <tr class="has-background-info">
+                <th class="has-text-white has-text-weight-bold">Model Name</th>
+                <th class="has-text-white has-text-weight-bold">System</th>
+                <th class="has-text-white has-text-weight-bold">Conditional</th>
+                <th class="has-text-white has-text-weight-bold">Condition Type</th>
+                <th class="has-text-white has-text-weight-bold">Cutoff</th>
+                <th class="has-text-white has-text-weight-bold">Training Data</th>
+                <th class="has-text-white has-text-weight-bold">Contributor</th>
+                <th class="has-text-white has-text-weight-bold">Download</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="has-text-weight-semibold">gen-a-sio2-v1</td>
+                <td>a-SiO<sub>2</sub></td>
+                <td><span class="tag is-danger">No</span></td>
+                <td class="has-text-grey">N/A</td>
+                <td>5 Å</td>
+                <td>6×3000 atoms from MD</td>
+                <td>Kai Yang</td>
+                <td class="has-text-centered">
+                  <a href="#" class="download-link" title="Download Model">⬇️(UNDER CONSTRUCTION)</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="has-text-weight-semibold">gen-a-sio2-cond-v1</td>
+                <td>a-SiO<sub>2</sub></td>
+                <td><span class="tag is-success">Yes</span></td>
+                <td>Cooling rate</td>
+                <td>5 Å</td>
+                <td>24×3000 atoms from MD</td>
+                <td>Kai Yang</td>
+                <td class="has-text-centered">
+                  <a href="#" class="download-link" title="Download Model">⬇️(UNDER CONSTRUCTION)</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="has-text-weight-semibold">gen-cu50zr50-v1</td>
+                <td>Cu<sub>50</sub>Zr<sub>50</sub></td>
+                <td><span class="tag is-danger">No</span></td>
+                <td class="has-text-grey">N/A</td>
+                <td>5 Å</td>
+                <td>2×5000 atoms (<a href="https://figshare.com/articles/dataset/Heterogeneous_thermal_activation_energy_in_Cu-Zr_metallic_glasses/12485795", class="training-data-link">here</a>)</td>
+                <td>Kai Yang</td>
+                <td class="has-text-centered">
+                  <a href="#" class="download-link" title="Download Model">⬇️(UNDER CONSTRUCTION)</a>
+                </td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Additional styling for the models table */
+  .table-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+  
+  .table {
+    margin-bottom: 0;
+  }
+  
+  .table thead th {
+    border-bottom: 2px solid #ffffff;
+    font-size: 0.95rem;
+    padding: 1rem 0.75rem;
+  }
+  
+  .table tbody td {
+    padding: 1rem 0.75rem;
+    vertical-align: middle;
+    font-size: 0.9rem;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .tag {
+    font-weight: 600;
+  }
+  
+  .download-link {
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+  }
+  
+  .download-link:hover {
+    transform: scale(1.2);
+  }
+  
+  .training-data-link {
+    color: #3273dc;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+  
+  .training-data-link:hover {
+    color: #2366d1;
+    text-decoration: none;
+  }
+  
+  /* Responsive table */
+  @media screen and (max-width: 768px) {
+    .table-container {
+      overflow-x: auto;
+    }
+    
+    .table {
+      font-size: 0.8rem;
+    }
+    
+    .table thead th,
+    .table tbody td {
+      padding: 0.5rem 0.4rem;
+    }
+  }
+</style>
 
 <!-- Validation -->
 <section class="hero is-light is-small">
