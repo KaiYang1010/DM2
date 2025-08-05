@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="description"
         content="Diffusion Models for Disordered Materials">
-  <meta name="keywords" content="DM4DM, Diffusion Models for Disordered Materials">
+  <meta name="keywords" content="DM2, Diffusion Models for Disordered Materials">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> DM4DM: Diffusion Models for Disordered Materials</title>
+  <title> DM2: Diffusion Models for Disordered Materials</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
@@ -22,7 +22,7 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script> -->
 
-  <link rel="icon" href="./static/images/DM4DM_logo.png">
+  <link rel="icon" href="./static/images/DM2_logo.png">
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -370,8 +370,8 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title is-bold">
-            <img src="static/images/DM4DM_logo.png" style="width:1em;vertical-align: middle" alt="Logo"/>
-            <span class="DM4DM" style="vertical-align: middle"> DM4DM</span>
+            <img src="static/images/DM2_logo.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <span class="DM2" style="vertical-align: middle"> DM<sup>2</sup></span>
             </h1>
           <h2 class="subtitle is-3 publication-subtitle">
             Diffusion Models for Disordered Materials
@@ -532,12 +532,12 @@
             <b>Generative models</b> show ample promise for materials design, but face severe limitations in the <b>amorphous materials space</b> due to their complex structures. Traditional approaches struggle to capture the intricate, non-periodic arrangements that characterize disordered materials, creating a significant gap in computational materials science.
           </p>
           <p>
-            To address this challenge, we developed <img src="static/images/DM4DM_logo.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-            <span class="mathvista">DM4DM</span>, a <b>denoising diffusion framework</b> that generates reliable atomistic structures across diverse amorphous systems and processing conditions. Our approach <b>outperforms classical simulations by up to 1000 times</b>, representing a dramatic leap in computational efficiency while maintaining structural accuracy.
+            To address this challenge, we developed <img src="static/images/DM2_logo.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="mathvista">DM<sup>2</sup></span>, a <b>denoising diffusion framework</b> that generates reliable atomistic structures across diverse amorphous systems and processing conditions. Our approach <b>outperforms classical simulations by up to 1000 times</b>, representing a dramatic leap in computational efficiency while maintaining structural accuracy.
           </p>
           <p>
-            With <img src="static/images/DM4DM_logo.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-            <span class="mathvista">DM4DM</span>, we enable a range of applications in amorphous materials research, including <b>performing fracture simulations with large, slow-cooled structures</b>, <b>generating mesoporous structures</b>, and <b>augmenting experimental datasets with synthetic data</b>. These capabilities open new avenues for understanding and designing complex disordered materials.
+            With <img src="static/images/DM2_logo.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="mathvista">DM<sup>2</sup></span>, we enable a range of applications in amorphous materials research, including <b>performing fracture simulations with large, slow-cooled structures</b>, <b>generating mesoporous structures</b>, and <b>augmenting experimental datasets with synthetic data</b>. These capabilities open new avenues for understanding and designing complex disordered materials.
           </p>
           <p>
             This work provides a <b>comprehensive roadmap</b> on how to use, validate, and develop generative models for amorphous materials. Our framework represents a significant step toward bridging the gap between computational efficiency and structural fidelity in materials science, paving the way for accelerated discovery and design of disordered materials with tailored properties.
@@ -551,8 +551,8 @@
 <!-- Framwork -->
 <section class="hero is-light is-small">
   <div class="hero-body has-text-centered">
-  <h1 class="title is-1 DM4DM">
-    <span class="DM4DM" style="vertical-align: middle">Framework</span>
+  <h1 class="title is-1 DM2">
+    <span class="DM2" style="vertical-align: middle">Framework</span>
   </h1>
   </div>
 </section>
@@ -564,8 +564,8 @@
         <div class="column is-four-fifths">
         <div class="content has-text-justified">
           <p>
-            <img src="static/images/DM4DM_logo.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-            <span class="mathvista">DM4DM</span> employs a sophisticated <b>denoiser model</b> trained to predict the displacement added to amorphous structures during the diffusion process. During training, 
+            <img src="static/images/DM2_logo.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="mathvista">DM<sup>2</sup></span> employs a sophisticated <b>denoiser model</b> trained to predict the displacement added to amorphous structures during the diffusion process. During training, 
             <b>displacements ε are sampled from Gaussian distributions</b> and systematically added to the training structures, enabling the model to learn the underlying structural patterns of disordered materials.
             <b>Structure-level labels</b> such as cooling rates are seamlessly embedded into the training set using a <b>Gaussian basis set</b>, allowing the model to condition generation on specific processing parameters. 
             To generate new structures, the model is provided with a <b>random input structure and a target cooling rate</b>. The structure is then <b>denoised over multiple time steps</b> following a carefully designed noise schedule similar to the <b>denoising diffusion probabilistic model (DDPM) framework</b>, progressively refining the atomic positions to produce physically realistic amorphous structures.
@@ -573,8 +573,8 @@
 
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/DM4DM_framwork.png" alt="DM4DM_framwork" width="120%"/>
-              <p><b>DM4DM Framework Overview:</b> Our denoising diffusion approach for generating amorphous structures, showing the training process with Gaussian noise addition and the iterative denoising procedure for structure generation.</p>
+              <img src="static/images/DM2_framwork.png" alt="DM2_framwork" width="120%"/>
+              <p><b>DM<sup>2</sup> Framework Overview:</b> Our denoising diffusion approach for generating amorphous structures, showing the training process with Gaussian noise addition and the iterative denoising procedure for structure generation.</p>
             </div>
           </div>
 
@@ -587,8 +587,8 @@
 <!-- Generation -->
 <section class="hero is-light is-small">
   <div class="hero-body has-text-centered">
-  <h1 class="title is-1 DM4DM">
-    <span class="DM4DM" style="vertical-align: middle">Quick Generation</span>
+  <h1 class="title is-1 DM2">
+    <span class="DM2" style="vertical-align: middle">Quick Generation</span>
   </h1>
   </div>
 </section>
@@ -780,8 +780,8 @@
 <!-- Validation -->
 <section class="hero is-light is-small">
   <div class="hero-body has-text-centered">
-  <h1 class="title is-1 DM4DM">
-    <span class="DM4DM" style="vertical-align: middle">Validation</span>
+  <h1 class="title is-1 DM2">
+    <span class="DM2" style="vertical-align: middle">Validation</span>
   </h1>
   </div>
 </section>
@@ -1105,8 +1105,8 @@ updateDisplay('1');
 <!-- Application -->
 <section class="hero is-light is-small">
   <div class="hero-body has-text-centered">
-  <h1 class="title is-1 DM4DM">
-    <span class="DM4DM" style="vertical-align: middle">Application</span>
+  <h1 class="title is-1 DM2">
+    <span class="DM2" style="vertical-align: middle">Application</span>
   </h1>
   </div>
 </section>
