@@ -66,13 +66,12 @@
 }
 
 .gif-image {
-  width: 100%;
   max-width: 300px;
-  height: auto;
+  height: 220px;          /* Fixed height */
+  width: auto;            /* Width adjusts to maintain aspect ratio */
   border-radius: 8px;
-  /* Removed box-shadow to eliminate white background effect */
   margin-bottom: 1.5rem;
-  background: transparent; /* Ensure GIF background is transparent */
+  background: transparent;
 }
 
 .gif-title {
@@ -496,7 +495,7 @@
       <!-- First GIF -->
       <div class="column is-one-third has-text-centered">
         <div class="gif-container">
-          <img src="./static/images/a-sio2-denoiser_200ppi.gif" alt="Generation of a-SiO2" class="gif-image">
+          <img src="./static/images/gifs/a-sio2-denoiser_200ppi.gif" alt="Generation of a-SiO2" class="gif-image">
           <h3 class="gif-title">Generation of a-SiO<sub>2</sub></h3>
         </div>
       </div>
@@ -504,7 +503,7 @@
       <!-- Second GIF -->
       <div class="column is-one-third has-text-centered">
         <div class="gif-container">
-          <img src="./static/images/a-sio2-denoiser_200ppi.gif" alt="Generation of a-SiO2" class="gif-image">
+          <img src="./static/images/gifs/a-sio2-cube.gif" alt="Generation of a-SiO2" class="gif-image">
           <h3 class="gif-title">Generation of a-SiO<sub>2</sub></h3>
         </div>
       </div>
@@ -512,8 +511,8 @@
       <!-- Third GIF -->
       <div class="column is-one-third has-text-centered">
         <div class="gif-container">
-          <img src="./static/images/a-sio2-denoiser_200ppi.gif" alt="Generation of a-SiO2" class="gif-image">
-          <h3 class="gif-title">Generation of a-SiO<sub>2</sub></h3>
+          <img src="./static/images/gifs/a-sio2-pore.gif" alt="Generation of a-SiO2" class="gif-image">
+          <h3 class="gif-title">Generation of mesoporous a-SiO<sub>2</sub></h3>
         </div>
       </div>
 
