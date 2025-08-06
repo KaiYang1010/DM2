@@ -43,7 +43,7 @@
     margin: 2rem 0;
     text-shadow: 0 1px 2px rgba(0,0,0,0.1);
   }
-  
+
   .hero-tagline .highlight {
     background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
     background-clip: text;
@@ -87,7 +87,7 @@
   .gif-image {
     max-width: 250px;
   }
-  
+
   .gif-title {
     font-size: 1.1rem;
   }
@@ -154,11 +154,11 @@
   .step-item {
     padding: 0.75rem 1rem;
   }
-  
+
   .step-title {
     font-size: 1.1rem;
   }
-  
+
   .download-section {
     padding: 1.5rem;
   }
@@ -168,10 +168,10 @@
   .validation-container {
     padding: 2rem 0;
   }
-  
+
   .validation-logos-grid {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
       "method1 method1 method1"
       "method2 method3 method4"
       "method5 method5 method5"
@@ -180,7 +180,7 @@
     gap: 0.5rem;
     margin-bottom: 2rem;
   }
-  
+
   .validation-logo {
     background: transparent;
     border: none;
@@ -192,30 +192,30 @@
     align-items: center;
     justify-content: center;
   }
-  
+
   .validation-logo:nth-child(1) { grid-area: method1; }
   .validation-logo:nth-child(2) { grid-area: method2; }
   .validation-logo:nth-child(3) { grid-area: method3; }
   .validation-logo:nth-child(4) { grid-area: method4; }
   .validation-logo:nth-child(5) { grid-area: method5; }
   .validation-logo:nth-child(6) { grid-area: method6; }
-  
+
   .validation-logo:hover {
     transform: translateY(-5px) scale(1.05);
     filter: brightness(1.1);
   }
-  
+
   .validation-logo.active {
     transform: translateY(-5px) scale(1.1);
     filter: brightness(1.2) drop-shadow(0 4px 12px rgba(50, 115, 220, 0.4));
   }
-  
+
   .validation-logo img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
   }
-  
+
   .result-display {
     background: #f8f9fa;
     border: 1px solid #e9ecef;
@@ -227,7 +227,7 @@
     align-items: center;
     justify-content: flex-start;
   }
-  
+
   .result-display img {
     max-width: 60vh;
     max-height: 30vh;
@@ -237,7 +237,7 @@
     object-fit: contain;
     margin-top: 0;
   }
-  
+
   .result-title {
     font-size: 1.5rem;
     font-weight: 600;
@@ -245,7 +245,7 @@
     margin-bottom: 1.5rem;
     text-align: center;
   }
-  
+
   .result-description {
     font-size: 1rem;
     color: #666;
@@ -254,10 +254,10 @@
     max-width: 600px;
     margin: 1rem auto 0 auto;
   }
-  
+
   @media screen and (max-width: 768px) {
     .validation-logos-grid {
-      grid-template-areas: 
+      grid-template-areas:
         "method1"
         "method2"
         "method3"
@@ -267,24 +267,24 @@
       grid-template-columns: 1fr;
       gap: 0.25rem;
     }
-    
+
     .validation-logo {
       padding: 0.25rem;
     }
-    
+
     .result-display {
       margin-top: 2rem;
       padding: 0.5rem;
       min-height: 200px;
     }
-    
+
     .result-description {
       text-align: left;
     }
   }
 </style>
 
-  
+
 
   <!-- <link href="https://unpkg.com/tabulator-tables@5.5.2/dist/css/tabulator_bulma.min.css" rel="stylesheet">
   <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"></script> -->
@@ -297,7 +297,7 @@
   <script src="./static/js/explorer-index.js"></script>
   <script src="./static/js/question_card.js"></script>
 
-  <script src="./static/js/leaderboard_testmini.js"></script>  
+  <script src="./static/js/leaderboard_testmini.js"></script>
   <script src="./data/results/output_folders.js" defer></script>
   <script src="./data/results/model_scores.js" defer></script>
 
@@ -314,7 +314,7 @@
       <span aria-hidden="true"></span>
     </a>
   </div>
-  
+
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
       <!-- <a class="navbar-item" href="https://keunhong.com">
@@ -389,7 +389,7 @@
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup style="color:#6fbf73;">1</sup>University of California, Los Angeles</span><br>
           </div>
-        
+
           <!-- <section> -->
             <!-- <div class="section" id="org-banners" style="display:fle">
               <a href="https://www.ucla.edu/" target="_blank" rel="external">
@@ -448,7 +448,7 @@
                   <span>Code</span>
                   </a>
               </span>
-             
+
               <!-- Visualization Link. -->
               <!-- <span class="link-block">
                 <a href="https://mathvista.github.io/#visualization"
@@ -471,7 +471,7 @@
   <div class="container is-max-desktop">
     <div class="content has-text-centered">
       <img src="static/images/tease_scores_gpt4v.png" alt="geometric reasoning" width="99%"/>
-      <p> Accuracy scores of one leading LLM (i.e., PoT GPT-4), four primary LMMs, random chance, and human performance our proposed 
+      <p> Accuracy scores of one leading LLM (i.e., PoT GPT-4), four primary LMMs, random chance, and human performance our proposed
       <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
       <span class="mathvista">MathVista</span>
       across mathematical reasoning and visual context types. PoT refers to program-of-thought prompting, and PoT GPT-4 is a textual LLM augmented with the caption and OCR text. GPT-4V is manually evaluated via the playground chatbot.
@@ -482,8 +482,8 @@
 
 <!-- NEW BIG TAGLINE -->
 <div class="hero-tagline has-text-centered">
-  <div><span class="highlight">Easy, fast and accurate </span></div>
-  <div><span class="highlight">generations of atomic structures</span></div>
+  <div><span class="highlight">Easy, fast, and accurate </span></div>
+  <div><span class="highlight">generation of atomistic structures</span></div>
   <div><span class="highlight">for disordered materials</span></div>
 </div>
 
@@ -491,7 +491,7 @@
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered is-multiline">
-      
+
       <!-- First GIF -->
       <div class="column is-one-third has-text-centered">
         <div class="gif-container">
@@ -528,18 +528,21 @@
         <h2 class="title is-3">Introduction</h2>
         <div class="content has-text-justified">
           <p>
-            <b>Generative models</b> show ample promise for materials design, but face severe limitations in the <b>amorphous materials space</b> due to their complex structures. Traditional approaches struggle to capture the intricate, non-periodic arrangements that characterize disordered materials, creating a significant gap in computational materials science.
+            <b>Generative models</b> show ample promise for materials design, but face severe limitations in the <b>amorphous materials space</b> due to their complex structures.
+            Traditional approaches struggle to capture the intricate, non-periodic arrangements that characterize disordered materials, creating a significant gap in computational materials science.
           </p>
           <p>
             To address this challenge, we developed <img src="static/images/DM2_logo.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-            <span class="mathvista">DM<sup>2</sup></span>, a <b>denoising diffusion framework</b> that generates reliable atomistic structures across diverse amorphous systems and processing conditions. Our approach <b>outperforms classical simulations by up to 1000 times</b>, representing a dramatic leap in computational efficiency while maintaining structural accuracy.
+            <span class="mathvista">DM<sup>2</sup></span>, a <b>denoising diffusion framework</b> that generates reliable atomistic structures across diverse amorphous systems and processing conditions.
+            Our approach <b>outperforms classical simulations by up to 1000 times</b>, representing a leap in computational efficiency while maintaining structural accuracy.
           </p>
           <p>
             With <img src="static/images/DM2_logo.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-            <span class="mathvista">DM<sup>2</sup></span>, we enable a range of applications in amorphous materials research, including <b>performing fracture simulations with large, slow-cooled structures</b>, <b>generating mesoporous structures</b>, and <b>augmenting experimental datasets with synthetic data</b>. These capabilities open new avenues for understanding and designing complex disordered materials.
+            <span class="mathvista">DM<sup>2</sup></span>, we enable a range of applications in amorphous materials research, including <b>performing fracture simulations with large, slow-cooled structures</b>, <b>generating mesoporous structures</b>, and <b>augmenting experimental datasets with synthetic data</b>. These capabilities open new avenues for understanding and modeling complex disordered materials.
           </p>
           <p>
-            This work provides a <b>comprehensive roadmap</b> on how to use, validate, and develop generative models for amorphous materials. Our framework represents a significant step toward bridging the gap between computational efficiency and structural fidelity in materials science, paving the way for accelerated discovery and design of disordered materials with tailored properties.
+            This work provides a <b>comprehensive roadmap</b> on how to use, validate, and develop generative models for amorphous materials.
+            Our framework represents bridges the gap between computational efficiency and structural fidelity in materials science, paving the way for accelerated discovery and design of disordered materials with tailored properties.
           </p>
         </div>
       </div>
@@ -564,9 +567,9 @@
         <div class="content has-text-justified">
           <p>
             <img src="static/images/DM2_logo.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-            <span class="mathvista">DM<sup>2</sup></span> employs a sophisticated <b>denoiser model</b> trained to predict the displacement added to amorphous structures during the diffusion process. During training, 
+            <span class="mathvista">DM<sup>2</sup></span> employs a <b>denoiser model</b> trained to predict the displacement added to amorphous structures during the diffusion process. During training,
             <b>displacements ε are sampled from Gaussian distributions</b> and systematically added to the training structures, enabling the model to learn the underlying structural patterns of disordered materials.
-            <b>Structure-level labels</b> such as cooling rates are seamlessly embedded into the training set using a <b>Gaussian basis set</b>, allowing the model to condition generation on specific processing parameters. 
+            <b>Structure-level labels</b> such as cooling rates are embedded into the training set using a <b>Gaussian basis set</b>, allowing the model to generate structures conditioned on given processing parameters.
             To generate new structures, the model is provided with a <b>random input structure and a target cooling rate</b>. The structure is then <b>denoised over multiple time steps</b> following a carefully designed noise schedule similar to the <b>denoising diffusion probabilistic model (DDPM) framework</b>, progressively refining the atomic positions to produce physically realistic amorphous structures.
           </p>
 
@@ -598,21 +601,21 @@
     <div class="columns is-centered">
       <div class="column is-three-quarters">
         <div class="content">
-          
+
           <!-- Steps -->
           <div class="steps-container">
             <div class="step-item">
               <h3 class="step-title"><span class="step-number">Step 1:</span> Define the system size and shape.</h3>
             </div>
-            
+
             <div class="step-item">
               <h3 class="step-title"><span class="step-number">Step 2:</span> (optional) Choose the cooling rate.</h3>
             </div>
-            
+
             <div class="step-item">
               <h3 class="step-title"><span class="step-number">Step 3:</span> Define the denoising steps.</h3>
             </div>
-            
+
             <div class="step-item">
               <h3 class="step-title"><span class="step-number">Step 4:</span> Run and generate!</h3>
             </div>
@@ -643,7 +646,7 @@
     <div class="columns is-centered">
       <div class="column is-full">
         <h2 class="title is-3 has-text-centered" style="margin-bottom: 3rem;">Available Models</h2>
-        
+
         <div class="table-container">
           <table class="table is-fullwidth is-striped is-hoverable">
             <thead>
@@ -690,7 +693,7 @@
                 <td class="has-text-grey">N/A</td>
                 <td>5 Å</td>
                 <td>2×5000 atoms (<a href="https://figshare.com/articles/dataset/Heterogeneous_thermal_activation_energy_in_Cu-Zr_metallic_glasses/12485795", class="training-data-link">here</a>)</td>
-                <td>Kai Yang</td>
+                <td>Wang et al.</td>
                 <td class="has-text-centered">
                   <a href="#" class="download-link" title="Download Model">⬇️(UNDER CONSTRUCTION)</a>
                 </td>
@@ -699,7 +702,7 @@
             </tbody>
           </table>
         </div>
-        
+
       </div>
     </div>
   </div>
@@ -713,62 +716,62 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     overflow: hidden;
   }
-  
+
   .table {
     margin-bottom: 0;
   }
-  
+
   .table thead th {
     border-bottom: 2px solid #ffffff;
     font-size: 0.95rem;
     padding: 1rem 0.75rem;
   }
-  
+
   .table tbody td {
     padding: 1rem 0.75rem;
     vertical-align: middle;
     font-size: 0.9rem;
   }
-  
+
   .table tbody tr:hover {
     background-color: #f8f9fa;
   }
-  
+
   .tag {
     font-weight: 600;
   }
-  
+
   .download-link {
     font-size: 1.2rem;
     text-decoration: none;
     transition: transform 0.2s ease;
   }
-  
+
   .download-link:hover {
     transform: scale(1.2);
   }
-  
+
   .training-data-link {
     color: #3273dc;
     text-decoration: underline;
     font-weight: 600;
   }
-  
+
   .training-data-link:hover {
     color: #2366d1;
     text-decoration: none;
   }
-  
+
   /* Responsive table */
   @media screen and (max-width: 768px) {
     .table-container {
       overflow-x: auto;
     }
-    
+
     .table {
       font-size: 0.8rem;
     }
-    
+
     .table thead th,
     .table tbody td {
       padding: 0.5rem 0.4rem;
@@ -792,34 +795,34 @@
       <!-- Left Column: Validation Logo Grid -->
       <div class="column is-one-third">
         <div class="validation-logos-grid">
-          
+
           <div class="validation-logo active" data-method="1">
             <img src="static/images/valid_logo/pdf_logo.png" alt="Validation Method 1">
           </div>
-          
+
           <div class="validation-logo" data-method="2">
             <img src="static/images/valid_logo/bad_logo.png" alt="Validation Method 2">
           </div>
-          
+
           <div class="validation-logo" data-method="3">
             <img src="static/images/valid_logo/ring_dis_logo.png" alt="Validation Method 3">
           </div>
-          
+
           <div class="validation-logo" data-method="4">
             <img src="static/images/valid_logo/mech.png" alt="Validation Method 4">
           </div>
-          
+
           <div class="validation-logo" data-method="5">
             <img src="static/images/valid_logo/deformation_logo.png" alt="Validation Method 5">
           </div>
-          
+
           <div class="validation-logo" data-method="6">
             <img src="static/images/valid_logo/info_entropy_logo.png" alt="Validation Method 6">
           </div>
-          
+
         </div>
       </div>
-      
+
       <!-- Right Column: Results Display -->
       <div class="column is-two-thirds">
         <div class="result-display">
@@ -827,8 +830,8 @@
             <h3 class="result-title" id="result-title">Pair Distribution Function Validation</h3>
             <img id="result-image" src="static/images/valid_result/valid_pdf_sio2.png" alt="Validation Result">
             <p class="result-description" id="result-description">
-              Our denoising diffusion model successfully reproduces the pair distribution function g(r) characteristics of amorphous materials. 
-              The generated structures show excellent agreement with experimental and molecular dynamics reference data, capturing both short-range 
+              Our denoising diffusion model successfully reproduces the pair distribution function g(r) characteristics of amorphous materials.
+              The generated structures show excellent agreement with experimental and molecular dynamics reference data, capturing both short-range
               and medium-range structural ordering essential for realistic material properties.
             </p>
           </div>
@@ -924,32 +927,32 @@ document.addEventListener('DOMContentLoaded', function() {
 // Function to update the display
 function updateDisplay(methodNumber) {
   const data = validationData[methodNumber];
-  
+
   // Add loading animation
   resultDisplay.style.transition = 'opacity 0.3s ease';
   resultDisplay.style.opacity = '0.5';
-  
+
   setTimeout(() => {
     // Update title
     resultTitle.textContent = data.title;
-    
+
     // Handle multiple images with carousel - FIXED CLEANUP
     const resultContent = document.querySelector('.result-content');
     const existingImages = resultContent.querySelectorAll('#result-image, .results-carousel, .carousel-controls, .carousel-wrapper');
     existingImages.forEach(img => img.remove());
-    
+
     // ALWAYS use carousel style - removed if/else condition
     const carouselDiv = document.createElement('div');
     carouselDiv.className = 'carousel results-carousel';
     carouselDiv.id = 'validation-carousel';
     carouselDiv.style.cssText = 'margin: 0 0 0.5rem 0; width: 100%;'; // Added width: 100%
-    
+
     // Create carousel slides
     data.images.forEach((imageData, index) => {
       const slideDiv = document.createElement('div');
       slideDiv.className = 'carousel-slide';
       slideDiv.style.cssText = `display: ${index === 0 ? 'block' : 'none'}; margin: 0; padding: 0; background: transparent; width: 100%;`; // Added width: 100%
-      
+
       const contentDiv = document.createElement('div');
       contentDiv.className = 'content has-text-centered';
       contentDiv.style.cssText = 'display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;'; // Added flexbox centering
@@ -968,55 +971,55 @@ function updateDisplay(methodNumber) {
       slideDiv.appendChild(contentDiv);
       carouselDiv.appendChild(slideDiv);
     });
-    
+
     // Create navigation controls - ONLY show if more than 1 image
     const controlsDiv = document.createElement('div');
     controlsDiv.className = 'carousel-controls';
     controlsDiv.style.cssText = 'position: relative; display: flex; align-items: center; justify-content: center; width: 100%; margin-top: 0.5rem;'; // Updated for better centering
-    
+
     let prevBtn, nextBtn, indicator;
-    
+
     if (data.images.length > 1) {
       prevBtn = document.createElement('button');
       prevBtn.innerHTML = '← Previous';
       prevBtn.className = 'button is-light is-small';
       prevBtn.style.cssText = 'margin-right: 0.5rem;';
-      
+
       nextBtn = document.createElement('button');
       nextBtn.innerHTML = 'Next →';
       nextBtn.className = 'button is-light is-small';
       nextBtn.style.cssText = 'margin-left: 1rem;';
-      
+
       indicator = document.createElement('span');
       indicator.style.cssText = 'font-size: 0.9rem; color: #666; margin: 0 1rem;';
       indicator.textContent = `1 / ${data.images.length}`;
     }
-    
+
     // Add carousel functionality
     let currentIndex = 0;
     const slides = carouselDiv.querySelectorAll('.carousel-slide');
-    
+
     function showSlide(index) {
       slides.forEach((slide, i) => {
         slide.style.display = i === index ? 'block' : 'none';
       });
-      
+
       // Update description for current image
       resultDescription.innerHTML = data.images[index].description;
-      
+
       if (data.images.length > 1) {
         indicator.textContent = `${index + 1} / ${data.images.length}`;
-        
+
         // Update button states
         prevBtn.disabled = index === 0;
         nextBtn.disabled = index === data.images.length - 1;
-        
+
         if (prevBtn.disabled) {
           prevBtn.classList.add('is-static');
         } else {
           prevBtn.classList.remove('is-static');
         }
-        
+
         if (nextBtn.disabled) {
           nextBtn.classList.add('is-static');
         } else {
@@ -1024,7 +1027,7 @@ function updateDisplay(methodNumber) {
         }
       }
     }
-    
+
     if (data.images.length > 1) {
       prevBtn.addEventListener('click', () => {
         if (currentIndex > 0) {
@@ -1032,31 +1035,31 @@ function updateDisplay(methodNumber) {
           showSlide(currentIndex);
         }
       });
-      
+
       nextBtn.addEventListener('click', () => {
         if (currentIndex < data.images.length - 1) {
           currentIndex++;
           showSlide(currentIndex);
         }
       });
-      
+
       controlsDiv.appendChild(prevBtn);
       controlsDiv.appendChild(indicator);
       controlsDiv.appendChild(nextBtn);
     }
-    
+
     // Initialize with first image description
     showSlide(0);
-    
+
     // Insert carousel and controls
     const carouselWrapper = document.createElement('div');
     carouselWrapper.className = 'carousel-wrapper';
     carouselWrapper.style.cssText = 'position: relative; display: flex; flex-direction: column; align-items: center; width: 100%; margin: 0 0 1rem 0;'; // Updated for better centering
     carouselWrapper.appendChild(carouselDiv);
     carouselWrapper.appendChild(controlsDiv);
-    
+
     resultContent.insertBefore(carouselWrapper, resultContent.querySelector('.result-description'));
-    
+
     // Show updated content
     resultDisplay.style.opacity = '1';
   }, 150);
@@ -1066,28 +1069,28 @@ function updateDisplay(methodNumber) {
 validationLogos.forEach((logo, index) => {
   logo.addEventListener('click', function(e) {
     e.preventDefault();
-    
+
     // Remove active class from all logos
     validationLogos.forEach(l => l.classList.remove('active'));
-    
+
     // Add active class to clicked logo
     this.classList.add('active');
-    
+
     // Get the method number
     const methodNumber = this.getAttribute('data-method');
     console.log('Clicked logo:', methodNumber);
-    
+
     // Update the display
     updateDisplay(methodNumber);
   });
-  
+
   // Add hover effect for better feedback
   logo.addEventListener('mouseenter', function() {
     if (!this.classList.contains('active')) {
       this.style.transform = 'translateY(-3px)';
     }
   });
-  
+
   logo.addEventListener('mouseleave', function() {
     if (!this.classList.contains('active')) {
       this.style.transform = 'translateY(0)';
@@ -1109,7 +1112,7 @@ updateDisplay('1');
   </h1>
   </div>
 </section>
-          
+
 <!-- APPLICATION SECTION -->
 <section class="section application-container">
   <div class="container">
@@ -1117,30 +1120,30 @@ updateDisplay('1');
       <!-- Left Column: Application Logo Grid -->
       <div class="column is-one-third">
         <div class="application-logos-grid">
-          
+
           <div class="application-logo active" data-method="1">
             <img src="static/images/application_logo/app_logo_cooling.png" alt="Application Method 1">
           </div>
-          
+
           <div class="application-logo" data-method="2">
             <img src="static/images/application_logo/app_logo_fracture.png" alt="Application Method 2">
           </div>
-          
+
           <div class="application-logo" data-method="3">
             <img src="static/images/application_logo/app_logo_metallic.png" alt="Application Method 3">
           </div>
-          
+
           <div class="application-logo" data-method="4">
             <img src="static/images/application_logo/app_logo_mesoporous.png" alt="Application Method 4">
           </div>
-          
+
           <div class="application-logo" data-method="5">
             <img src="static/images/application_logo/app_logo_exp.png" alt="Application Method 5">
           </div>
-          
+
         </div>
       </div>
-      
+
       <!-- Right Column: Results Display -->
       <div class="column is-two-thirds">
         <div class="app-result-display">
@@ -1161,10 +1164,10 @@ updateDisplay('1');
   .application-container {
     padding: 2rem 0;
   }
-  
+
   .application-logos-grid {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
       "app1 app1"
       "app2 app2"
       "app3 app4"
@@ -1173,7 +1176,7 @@ updateDisplay('1');
     gap: 0.5rem;
     margin-bottom: 2rem;
   }
-  
+
   .application-logo {
     background: transparent;
     border: none;
@@ -1185,29 +1188,29 @@ updateDisplay('1');
     align-items: center;
     justify-content: center;
   }
-  
+
   .application-logo:nth-child(1) { grid-area: app1; }
   .application-logo:nth-child(2) { grid-area: app2; }
   .application-logo:nth-child(3) { grid-area: app3; }
   .application-logo:nth-child(4) { grid-area: app4; }
   .application-logo:nth-child(5) { grid-area: app5; }
-  
+
   .application-logo:hover {
     transform: translateY(-5px) scale(1.05);
     filter: brightness(1.1);
   }
-  
+
   .application-logo.active {
     transform: translateY(-5px) scale(1.1);
     filter: brightness(1.2) drop-shadow(0 4px 12px rgba(50, 115, 220, 0.4));
   }
-  
+
   .application-logo img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
   }
-  
+
   .app-result-display {
     background: #f8f9fa;
     border: 1px solid #e9ecef;
@@ -1219,7 +1222,7 @@ updateDisplay('1');
     align-items: center;
     justify-content: flex-start;
   }
-  
+
   .app-result-display img {
     max-width: 100%;
     max-height: 50vh;
@@ -1228,7 +1231,7 @@ updateDisplay('1');
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     object-fit: contain;
   }
-  
+
   .app-result-title {
     font-size: 1.5rem;
     font-weight: 600;
@@ -1236,7 +1239,7 @@ updateDisplay('1');
     margin-bottom: 1.5rem;
     text-align: center;
   }
-  
+
   .app-result-description {
     font-size: 1rem;
     color: #666;
@@ -1245,15 +1248,15 @@ updateDisplay('1');
     max-width: 600px;
     margin: 1rem auto 0 auto;
   }
-  
+
   .section-title {
     text-align: center;
     margin-bottom: 3rem;
   }
-  
+
   @media screen and (max-width: 768px) {
     .application-logos-grid {
-      grid-template-areas: 
+      grid-template-areas:
         "app1"
         "app2"
         "app3"
@@ -1262,17 +1265,17 @@ updateDisplay('1');
       grid-template-columns: 1fr;
       gap: 0.25rem;
     }
-    
+
     .application-logo {
       padding: 0.25rem;
     }
-    
+
     .app-result-display {
       margin-top: 2rem;
       padding: 1.5rem;
       min-height: 200px;
     }
-    
+
     .app-result-description {
       text-align: left;
     }
@@ -1376,32 +1379,32 @@ updateDisplay('1');
     // Function to update the display
     function updateAppDisplay(methodNumber) {
       const data = applicationData[methodNumber];
-      
+
       // Add loading animation
       appResultDisplay.style.transition = 'opacity 0.3s ease';
       appResultDisplay.style.opacity = '0.5';
-      
+
       setTimeout(() => {
         // Update title
         appResultTitle.textContent = data.title;
-        
+
         // Handle multiple images with carousel
         const appResultContent = document.querySelector('.app-result-content');
         const existingImages = appResultContent.querySelectorAll('#app-result-image, .results-carousel, .carousel-controls, .carousel-wrapper');
         existingImages.forEach(img => img.remove());
-        
+
         // ALWAYS use carousel style
         const carouselDiv = document.createElement('div');
         carouselDiv.className = 'carousel results-carousel';
         carouselDiv.id = 'app-carousel';
         carouselDiv.style.cssText = 'margin: 0 0 0.5rem 0; width: 100%;';
-        
+
         // Create carousel slides
         data.images.forEach((imageData, index) => {
           const slideDiv = document.createElement('div');
           slideDiv.className = 'carousel-slide';
           slideDiv.style.cssText = `display: ${index === 0 ? 'block' : 'none'}; margin: 0; padding: 0; background: transparent; width: 100%;`;
-          
+
           const contentDiv = document.createElement('div');
           contentDiv.className = 'content has-text-centered';
           contentDiv.style.cssText = 'display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;';
@@ -1420,55 +1423,55 @@ updateDisplay('1');
           slideDiv.appendChild(contentDiv);
           carouselDiv.appendChild(slideDiv);
         });
-        
+
         // Create navigation controls - ONLY show if more than 1 image
         const controlsDiv = document.createElement('div');
         controlsDiv.className = 'carousel-controls';
         controlsDiv.style.cssText = 'position: relative; display: flex; align-items: center; justify-content: center; width: 100%; margin-top: 0.5rem;';
-        
+
         let prevBtn, nextBtn, indicator;
-        
+
         if (data.images.length > 1) {
           prevBtn = document.createElement('button');
           prevBtn.innerHTML = '← Previous';
           prevBtn.className = 'button is-light is-small';
           prevBtn.style.cssText = 'margin-right: 0.5rem;';
-          
+
           nextBtn = document.createElement('button');
           nextBtn.innerHTML = 'Next →';
           nextBtn.className = 'button is-light is-small';
           nextBtn.style.cssText = 'margin-left: 1rem;';
-          
+
           indicator = document.createElement('span');
           indicator.style.cssText = 'font-size: 0.9rem; color: #666; margin: 0 1rem;';
           indicator.textContent = `1 / ${data.images.length}`;
         }
-        
+
         // Add carousel functionality
         let currentIndex = 0;
         const slides = carouselDiv.querySelectorAll('.carousel-slide');
-        
+
         function showSlide(index) {
           slides.forEach((slide, i) => {
             slide.style.display = i === index ? 'block' : 'none';
           });
-          
+
           // Update description for current image
           appResultDescription.innerHTML = data.images[index].description;
-          
+
           if (data.images.length > 1) {
             indicator.textContent = `${index + 1} / ${data.images.length}`;
-            
+
             // Update button states
             prevBtn.disabled = index === 0;
             nextBtn.disabled = index === data.images.length - 1;
-            
+
             if (prevBtn.disabled) {
               prevBtn.classList.add('is-static');
             } else {
               prevBtn.classList.remove('is-static');
             }
-            
+
             if (nextBtn.disabled) {
               nextBtn.classList.add('is-static');
             } else {
@@ -1476,7 +1479,7 @@ updateDisplay('1');
             }
           }
         }
-        
+
         if (data.images.length > 1) {
           prevBtn.addEventListener('click', () => {
             if (currentIndex > 0) {
@@ -1484,31 +1487,31 @@ updateDisplay('1');
               showSlide(currentIndex);
             }
           });
-          
+
           nextBtn.addEventListener('click', () => {
             if (currentIndex < data.images.length - 1) {
               currentIndex++;
               showSlide(currentIndex);
             }
           });
-          
+
           controlsDiv.appendChild(prevBtn);
           controlsDiv.appendChild(indicator);
           controlsDiv.appendChild(nextBtn);
         }
-        
+
         // Initialize with first image description
         showSlide(0);
-        
+
         // Insert carousel and controls
         const carouselWrapper = document.createElement('div');
         carouselWrapper.className = 'carousel-wrapper';
         carouselWrapper.style.cssText = 'position: relative; display: flex; flex-direction: column; align-items: center; width: 100%; margin: 0 0 1rem 0;';
         carouselWrapper.appendChild(carouselDiv);
         carouselWrapper.appendChild(controlsDiv);
-        
+
         appResultContent.insertBefore(carouselWrapper, appResultContent.querySelector('.app-result-description'));
-        
+
         // Show updated content
         appResultDisplay.style.opacity = '1';
       }, 150);
@@ -1518,28 +1521,28 @@ updateDisplay('1');
     applicationLogos.forEach((logo, index) => {
       logo.addEventListener('click', function(e) {
         e.preventDefault();
-        
+
         // Remove active class from all logos
         applicationLogos.forEach(l => l.classList.remove('active'));
-        
+
         // Add active class to clicked logo
         this.classList.add('active');
-        
+
         // Get the method number
         const methodNumber = this.getAttribute('data-method');
         console.log('Clicked app logo:', methodNumber);
-        
+
         // Update the display
         updateAppDisplay(methodNumber);
       });
-      
+
       // Add hover effect for better feedback
       logo.addEventListener('mouseenter', function() {
         if (!this.classList.contains('active')) {
           this.style.transform = 'translateY(-3px)';
         }
       });
-      
+
       logo.addEventListener('mouseleave', function() {
         if (!this.classList.contains('active')) {
           this.style.transform = 'translateY(0)';
@@ -1560,7 +1563,7 @@ updateDisplay('1');
     <pre><code>@article{yang2025generative,
   title   ={A Generative Diffusion Model for Amorphous Materials},
   author  ={Yang, Kai and Schwalbe-Koda, Daniel},
-  journal ={arXiv preprint arXiv:2507.05024},
+  journal ={arXiv:2507.05024},
   year    ={2025}
 }</code></pre>
   </div>
@@ -1568,7 +1571,8 @@ updateDisplay('1');
 
 
 <!-- LOGO section -->
-<section>
+<section class="section" id="Funding">
+  <h2 class="title is-3 has-text-centered">Funding</h2>
   <div class="section" id="org-banners" style="display:flex">
     <a href="https://www.mse.ucla.edu/" target="_blank" rel="external">
       <img class="center-block org-banner" src="static/images/logos/ucla_mse_logo.png">
